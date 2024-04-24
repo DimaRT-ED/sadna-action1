@@ -17,7 +17,9 @@ jobs:
     
       - name: print hello
         run: echo "hello world from job-1"
-        
+      
+      - uses: actions/checkout@v2     
+
       - name: Multiline command
         run: |
           touch 1.txt
@@ -38,9 +40,15 @@ jobs:
           echo "Var1 = ${{ env.VAR1 }}"
           echo "Var2 = ${{ env.VAR2 }}"
           echo "This is my local var: $LOCAL_VAR"
+          ls -la
           pwd
         env:
           LOCAL_VAR: "This is Superr local Environment variable"
+
+      - uses: actions/checkout@v2     
+
+      - run: ls -la
+          
       - name: Print Name
         run: echo "My package name is :${{ env.MY_PACKAGE_NAME }}"
     
