@@ -1,6 +1,5 @@
 #---------------------------------------------------------------------
 #  GitHub Action Basics
-#  
 #---------------------------------------------------------------------
 name: My-GitHubActions-Basics
 on: 
@@ -11,7 +10,6 @@ jobs:
   job-1:
     runs-on: ubuntu-latest
     steps:
-
       - name: print hello
         run: echo "hello world from job-1"
 
@@ -21,7 +19,6 @@ jobs:
   job-2:
     runs-on: ubuntu-latest
     steps:
-
       - name: print hello
         run: echo "hello world from job-2"
 
