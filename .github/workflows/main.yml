@@ -35,9 +35,10 @@ jobs:
       VAR2 : "This is Job Level Variable-2"
     steps:
     
-      - name: print hello
-        run: echo "var1 value is :${{ env.VAR1 }}
-        
+      - name: Print env vars
+        run : |
+          echo "Var1 = ${{ env.VAR1 }}"
+          echo "Var2 = ${{ env.VAR2 }}"
       - name: Print Name
         run: echo "My package name is :${{ env.MY_PACKAGE_NAME }}"
         
