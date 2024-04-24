@@ -26,6 +26,7 @@ jobs:
           ls -la
           echo "My application name is :${{ env.MY_APP_NAME }}"
           pwd
+          cat main.txt
 
   job-2:
     runs-on: ubuntu-latest
